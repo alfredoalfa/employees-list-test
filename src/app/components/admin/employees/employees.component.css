@@ -1,0 +1,70 @@
+p {
+    font-size: 1.8rem;
+}
+
+table {
+    width: 100%;
+}
+
+table th{
+    width: 10%;
+}
+
+.tool-container__toolbar {
+    height: 80px;
+}
+
+.tool-container__no-data {
+    font-size: 2.2rem;
+}
+
+.table-container {
+    padding-bottom: 25px;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+.table-container__pointer {
+    cursor: pointer;
+}
+
+.table-container__edit {
+    color: #5184b4;
+}
+
+.table-container__delete {
+    color: #ad3b3b;
+}
+
+
+.tool-container__toolbar__header {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items:flex-start;
+    white-space: nowrap;
+}
+
+@media (min-width: 420px) {
+    .tool-container__toolbar {
+        height: 64px;
+    }
+
+    .tool-container__toolbar__header {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 768px) {
+    .table-container  {
+        margin: 0 100px;
+    }
+}

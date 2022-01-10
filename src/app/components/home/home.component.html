@@ -1,0 +1,11 @@
+<div class="home-content">
+    <mat-spinner [diameter]="40" *ngIf="loading"></mat-spinner>
+    <div *ngIf="!loading">
+    <section class="home-content__logo">
+        <img src="../../../assets/image/team.png" alt="employees image">
+    </section>
+    <section class="home-content__button">
+        <button mat-raised-button color="primary" (click)="adminPage()">Employee Management</button>
+    </section>
+  </div>
+</div>

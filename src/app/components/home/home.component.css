@@ -1,0 +1,31 @@
+main {
+    height: 100%;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: #f3f2ee;
+}
+
+.home-content__logo {
+    width: 100%;
+    max-width: 250px;
+}
+
+.home-content__logo img { 
+    width: 100%;
+}
+
+.home-content__button {
+    width: 90%;
+    max-width: 250px;
+    margin: auto;
+}
+
+.home-content__button button{
+    width: 100%
+}

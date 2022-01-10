@@ -1,0 +1,36 @@
+p {
+    font-size: 1.8rem;
+}
+
+.employee-contaniner {
+    margin-top: 5px;
+}
+
+.employee-contaniner__spinner, .employee-contaniner__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.employee-contaniner__form-button {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+}
+
+.employee-contaniner__form-button button{
+    margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+    .employee-contaniner  {
+        margin: 5px 100px 0 100px;
+    }
+}

@@ -1,0 +1,53 @@
+<div class="tool-container">
+    <mat-toolbar>
+        <p>{{title}} Employee</p>
+    </mat-toolbar>
+</div>
+<div class="employee-contaniner">
+    <mat-card>
+     <div class="employee-contaniner__spinner">
+      <mat-spinner [diameter]="40" *ngIf="loading"></mat-spinner>
+    </div>
+        <form [formGroup]="form" (ngSubmit)="addEditEmployee()" *ngIf="!loading">
+        <div class="employee-contaniner__form">
+
+              <mat-form-field appearance="fill">
+                <mat-label>Employee Name</mat-label>
+                <input formControlName='name' matInput placeholder="Employee Name">
+                <mat-error  *ngIf="form.get('name')?.invalid">Please enter a name with more than 3 characters </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Employee Surname</mat-label>
+                <input formControlName='surname' matInput placeholder="Employee Surname">
+                <mat-error  *ngIf="form.get('surname')?.invalid">Please enter a surname with more than 3 characters </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Work Position</mat-label>
+                <mat-select formControlName='workPosition' matInput placeholder="Work Position">
+                  <mat-option *ngFor="let position of workPositon.positions | keyvalue" [value]="position.key">
+                    {{position.value}}
+                  </mat-option>
+                </mat-select>
+                <mat-error  *ngIf="form.get('workPosition')?.invalid">Please select a work position </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="fill">
+                <mat-label>Choose a date</mat-label>
+                <input formControlName="date" matInput [readonly]="true" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="this.id ? true : false"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error  *ngIf="form.get('date')?.invalid">Please select a date </mat-error>
+              </mat-form-field>
+
+              <div class="employee-contaniner__form-button">
+                <button type="button" mat-raised-button routerLink="/admin/">Back</button>
+                <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">{{ id ? 'Edit' : 'Add' }}</button>
+              </div>
+
+        </div>
+    </form>
+    </mat-card>
+
+</div>
